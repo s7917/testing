@@ -9,7 +9,6 @@ const home = fs.readFileSync("index.html" , "utf-8");
 // console.log(os.totalmem());
 // create your own server
   const Port = 2000;
-  const hostname = "localhost"
 const server = http.createServer((req , res )=>{
  if(req.url =="/"){
    return  res.end(home);
@@ -27,6 +26,6 @@ const server = http.createServer((req , res )=>{
 });
 
 
-server.listen(Port , hostname , ()=>{
+server.listen(Port , ()=>{
     console.log("server is running on http://localhost:2000)");
 })
